@@ -22,34 +22,41 @@ int main ()
     }
 }
 /*
-#include <iostream>
+    #include <iostream>
 using namespace std;
 
-bool searchValue(int arr[], int size, int value, int index) {
+// Recursive linear search function
+int linearSearch(int arr[], int size, int value, int index) {
     // Base case: If index reaches beyond the array size, value not found
     if (index >= size) {
-        return false;
+        return -1;
     }
 
-    // If the current element matches the value, return true
+    // If the current element matches the value, return its index
     if (arr[index] == value) {
-        cout << "Value found: " << arr[index] << endl;
-        return true;
+        return index;
     }
 
     // Recursive call to search in the rest of the array
-    return searchValue(arr, size, value, index + 1);
+    return linearSearch(arr, size, value, index + 1);
 }
 
 int main() {
-    int value = 6;
+    int value = 13;
     int arr[] = {5, 2, 10, 6, 7, 13};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    // Call the recursive function to search for the value
-    if (!searchValue(arr, size, value, 0)) {
+    // Call the recursive linear search function
+    int index = linearSearch(arr, size, value, 0);
+
+    // Check if the value is found
+    if (index != -1) {
+        cout << "Value found at index " << index << endl;
+    } else {
         cout << "Value not found" << endl;
     }
 
     return 0;
-}*/
+}
+
+*/
