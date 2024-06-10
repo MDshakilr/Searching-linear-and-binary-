@@ -1,3 +1,32 @@
+/*
+
+Binary-Search(A, target)
+1.  low = 0
+2.  high = length(A) - 1
+3.  while low <= high
+4.      mid = floor((low + high) / 2)
+5.      if A[mid] == target
+6.          return mid
+7.      else if A[mid] < target
+8.          low = mid + 1
+9.      else
+10.         high = mid - 1
+11. return -1
+
+    
+Pseudocode for Binary Search (Recursive)
+Binary-Search(A, target, low, high)
+1.  if low > high
+2.      return -1
+3.  mid = floor((low + high) / 2)
+4.  if A[mid] == target
+5.      return mid
+6.  else if A[mid] < target
+7.      return Binary-Search(A, target, mid + 1, high)
+8.  else
+9.      return Binary-Search(A, target, low, mid - 1)
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
